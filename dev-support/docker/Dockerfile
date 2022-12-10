@@ -169,7 +169,8 @@ RUN apt-get -q update \
 RUN pip2 install \
     configparser==4.0.2 \
     pylint==1.9.2 \
-    isort==4.3.21
+    isort==4.3.21 \
+    lazy-object-proxy==1.4.0
 
 ####
 # Install dateutil.parser
@@ -185,7 +186,7 @@ RUN apt-get -q update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
     && ln -s /usr/bin/nodejs /usr/bin/node \
-    && npm install npm@latest -g \
+    && npm install npm@6.14.11 -g \
     && npm install -g jshint
 
 ###
